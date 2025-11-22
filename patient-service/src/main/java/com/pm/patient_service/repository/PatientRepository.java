@@ -8,5 +8,6 @@ import java.util.UUID;
 
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, UUID> {
-
+    //Query to check email already exists in table
+    boolean existsByEmail(String email);
 }
